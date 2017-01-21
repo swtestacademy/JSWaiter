@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 /**
  * Created by ONUR on 21.01.2017.
  */
-public class KariyerNet extends TestBase {
+public class KariyerRecruiterLoginTest extends TestBase {
 
     @Test
     public void KariyerNetSampleTest() throws Exception {
