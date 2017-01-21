@@ -18,7 +18,6 @@ public class HomePage extends BasePage{
     public WebElement myAccount;
 
     public void gotoMyAccount (){
-        //hoverByAction(By.id("myAccount"));
         hoverByAction(myAccount);
     }
 
