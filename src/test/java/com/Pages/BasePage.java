@@ -19,8 +19,7 @@ public class BasePage {
         wait = new WebDriverWait(driver, 10);
     }
 
-    public void hoverByAction (By by) {
-        WebElement element = driver.findElement(by);
+    public void hoverByAction (WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
     }
