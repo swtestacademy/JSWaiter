@@ -143,10 +143,9 @@ public class JSWaiter {
         waitUntilAngularReady();
     }
 
-    public static void sleep (Integer seconds) {
-        long secondsLong = (long) seconds;
+    public static void sleep (long milis) {
         try {
-            Thread.sleep(secondsLong);
+            Thread.sleep(milis);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

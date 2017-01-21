@@ -14,15 +14,15 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    @FindBy(how = How.ID, using = "myAccount")
-    public WebElement myAccount;
+    @FindBy(how = How.XPATH, using = "//a[contains(.,'İŞVEREN')]")
+    public WebElement recruiter;
 
-    public void gotoMyAccount (){
-        hoverByAction(myAccount);
+    public void hoverRecruiterAccount(){
+        hoverByAction(recruiter);
     }
 
     public void openHomePage (){
-        driver.navigate().to("http://www.hepsiburada.com/");
+        driver.navigate().to("http://www.kariyer.net/");
     }
 
     public void printTitle() {

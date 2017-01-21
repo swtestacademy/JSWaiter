@@ -7,11 +7,11 @@ import org.testng.annotations.Test;
 /**
  * Created by ONUR on 21.01.2017.
  */
-public class HepsiBuradaTest extends TestBase {
+public class KariyerNet extends TestBase {
 
     @Test
-    public void HBSampleTest () throws Exception {
-        System.out.println("HB Test Started!");
+    public void KariyerNetSampleTest() throws Exception {
+        System.out.println("Kariyer.net Test Started!");
         //Open HomePage
         pages.homePage().openHomePage();
 
@@ -21,10 +21,13 @@ public class HepsiBuradaTest extends TestBase {
         //Asynchronous wait
         JSWaiter.waitJQueryAngular();
 
-        //Action to hover myAccount
-        pages.homePage().gotoMyAccount();
+        //Action to hover Recruiter
+        pages.homePage().hoverRecruiterAccount();
 
         //Click login button
-        pages.clickBy(By.id("login"));
+        pages.clickBy(By.xpath("//a[contains(.,'GİRİŞ YAP')]"));
+
+        JSWaiter.sleep(5000);
+
     }
 }
