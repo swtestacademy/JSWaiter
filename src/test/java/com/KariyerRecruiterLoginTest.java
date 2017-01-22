@@ -18,9 +18,6 @@ public class KariyerRecruiterLoginTest extends TestBase {
         //Print Title
         pages.homePage().printTitle();
 
-        //Asynchronous wait
-        JSWaiter.waitJQueryAngular();
-
         //Action to hover Recruiter
         pages.homePage().hoverRecruiterAccount();
 

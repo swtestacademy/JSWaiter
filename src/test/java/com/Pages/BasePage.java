@@ -1,5 +1,6 @@
 package com.Pages;
 
+import com.Utulities.JSWaiter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +21,8 @@ public class BasePage {
     }
 
     public void hoverByAction (WebElement element) {
+        //Asynchronous wait
+        JSWaiter.waitJQueryAngular();
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
     }
