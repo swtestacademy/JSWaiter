@@ -28,6 +28,9 @@ public class BasePage {
     }
 
     public void clickBy (By by) {
+        //Asynchronous wait
+        JSWaiter.waitJQueryAngular();
+        //Explicit wait
         wait.until(ExpectedConditions.elementToBeClickable(by)).click();
     }
 
