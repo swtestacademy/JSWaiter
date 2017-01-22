@@ -1,5 +1,6 @@
 package com.Pages;
 
+import com.Utulities.JSWaiter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,6 +14,8 @@ public class Pages extends BasePage {
     }
 
     public HomePage homePage () {
+        //Asynchronous wait
+        JSWaiter.waitJQueryAngular();
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         return homePage;
     }
