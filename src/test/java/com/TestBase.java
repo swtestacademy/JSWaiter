@@ -7,10 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
 
@@ -24,7 +21,7 @@ public class TestBase {
     Pages pages;
 
     //Do the test setup
-    @BeforeClass
+    @BeforeMethod
     @Parameters(value={"browser","platform"})
     public void setupTest (@Optional String browser, @Optional String platform) throws MalformedURLException {
         browser="chrome";
@@ -41,7 +38,7 @@ public class TestBase {
         pages = new Pages(driver);
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown() throws Exception {
         driver.quit();
     }
