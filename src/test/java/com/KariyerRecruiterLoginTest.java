@@ -19,10 +19,10 @@ public class KariyerRecruiterLoginTest extends TestBase {
         pages.homePage().printTitle();
 
         //Action to hover Recruiter
-        pages.homePage().hoverRecruiterAccount();
+        //pages.homePage().hoverRecruiterAccount();
 
         //Click login button
-        pages.clickBy(By.xpath("//a[contains(.,'GİRİŞ YAP')]"));
+        pages.clickBy(By.xpath("//a[contains(.,'ÜYE GİRİŞİ')]"));
 
         JSWaiter.sleep(5000);
 
