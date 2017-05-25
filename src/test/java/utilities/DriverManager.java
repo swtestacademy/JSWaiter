@@ -27,7 +27,7 @@ public class DriverManager {
         } else if (browser.equals("chrome")) {
             driver = new ChromeDriver(caps);
         } else {
-            Assert.assertTrue(false);
+            Assert.assertTrue(false,"There is a problem on browser selection! Please check testng xml file!");
         }
         return driver;
     }
