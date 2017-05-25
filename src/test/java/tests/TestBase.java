@@ -1,5 +1,7 @@
 package tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.Pages;
 import utilities.DesiredCapsManager;
 import utilities.JSWaiter;
@@ -10,6 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
+import java.util.List;
+
+import static utilities.JSWaiter.sleep;
 
 /**
  * Created by ONUR on 21.01.2017.

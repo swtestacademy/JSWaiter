@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,9 +18,14 @@ public class HomePage extends BasePage {
     @FindBy(how = How.XPATH, using = "//a[contains(.,'İŞVEREN')]")
     public WebElement recruiter;
 
-    public void hoverRecruiterAccount(){
+    @FindBy(how = How.XPATH, using = "//a[contains(.,'ÜYE GİRİŞİ')]")
+    public WebElement loginButton;
+
+    /*public void hoverRecruiterAccount(){
         hoverByAction(recruiter);
-    }
+    }*/
+
+    public void closePopupIfExists () throws InterruptedException {handlePopup(By.cssSelector(".ui-dialog-titlebar-close"));}
 
     public void openHomePage (){
         driver.navigate().to("http://www.kariyer.net/");
@@ -28,4 +34,6 @@ public class HomePage extends BasePage {
     public void printTitle() {
         System.out.println("HB Test's pages.pages title is: " + driver.getTitle());
     }
+
+    public void clickLogin () {click(loginButton);}
 }

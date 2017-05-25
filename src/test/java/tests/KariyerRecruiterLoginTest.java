@@ -18,11 +18,14 @@ public class KariyerRecruiterLoginTest extends TestBase {
         //Print Title
         pages.homePage().printTitle();
 
+        //Close Popup If Exists
+        pages.homePage().closePopupIfExists();
+
         //Action to hover Recruiter
         //pages.homePage().hoverRecruiterAccount();
 
         //Click login button
-        pages.clickBy(By.xpath("//a[contains(.,'ÜYE GİRİŞİ')]"));
+        pages.homePage().clickLogin();
 
         JSWaiter.sleep(5000);
 
