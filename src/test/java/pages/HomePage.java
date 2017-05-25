@@ -32,7 +32,7 @@ public class HomePage extends BasePage {
     }
 
     public void printTitle() {
-        System.out.println("HB Test's pages.pages title is: " + driver.getTitle());
+        System.out.println("Page title is: " + driver.getTitle());
     }
 
     public void clickLogin () {click(loginButton);}

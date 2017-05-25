@@ -28,6 +28,6 @@ public class KariyerRecruiterLoginTest extends TestBase {
         pages.homePage().clickLogin();
 
         JSWaiter.sleep(5000);
-
+        System.out.println("Kariyer.net Test Finished!");
     }
 }
