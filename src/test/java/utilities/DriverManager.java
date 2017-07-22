@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
-import sun.security.krb5.internal.crypto.Des;
 
 /**
  * Created by onurb on 25-May-17.
@@ -27,7 +26,7 @@ public class DriverManager {
         } else if (browser.equals("chrome")) {
             driver = new ChromeDriver(caps);
         } else {
-            Assert.assertTrue(false);
+            Assert.assertTrue(false,"There is a problem on browser selection! Please check testng xml file!");
         }
         return driver;
     }

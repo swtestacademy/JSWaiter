@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" name="Suite" parallel="tests" >
+    <!--Suite Level Parameters-->
+    <parameter name="browser" value="chrome" />
+    <parameter name="platform" value="WINDOWS" />
     <test name="KariyerLoginTest">
+        <!--Test Level Parameter-->
+        <!--<parameter name="browser" value="firefox" />-->
         <classes>
             <class name="tests.KariyerRecruiterLoginTest"/>
         </classes>
